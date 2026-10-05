@@ -1,0 +1,3 @@
+# One line-ending style for everyone, including Windows checkouts:
+# the Dockerfile and shell commands break on CRLF.
+* text=auto eol=lf

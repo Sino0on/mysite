@@ -1,0 +1,25 @@
+# Зависимости и сборка создаются внутри образа заново.
+node_modules
+.next
+out
+*.tsbuildinfo
+
+# Секреты не должны попасть в образ: в контейнер они приходят через env_file.
+.env*
+
+# Для сборки не нужны.
+.git
+.gitignore
+.gitattributes
+.idea
+.vscode
+.claude
+.dockerignore
+Dockerfile
+docker-compose.yml
+README.md
+AGENTS.md
+CLAUDE.md
+*.docx
+.DS_Store
+npm-debug.log*

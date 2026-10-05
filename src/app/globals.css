@@ -1,0 +1,352 @@
+@import "tailwindcss";
+
+/*
+  Палитра из брифа, сведённая к пяти ролям:
+  бумага и чернила — текст и поверхности,
+  синий — только то, на что можно нажать,
+  зелёный — «на связи» и «отправлено»,
+  красный — ошибки.
+  Стандартная палитра Tailwind выключена, чтобы шестой цвет не появился случайно.
+*/
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+
+  --color-paper: #fafafa;
+  --color-surface: #ffffff;
+  --color-sunken: #f5f5f5;
+  --color-line: #e5e5e5;
+
+  --color-ink: #1a1a1a;
+  --color-muted: #666666; /* 5.5:1 на бумаге */
+  --color-on-ink-muted: #a3a3a3; /* 6.9:1 на чернилах */
+
+  /* #3B82F6 из брифа даёт 3.5:1 с белым — мало для текста.
+     Для текста и заливок берём его тёмный шаг (5.2:1), сам #3B82F6 оставляем
+     там, где текста нет: фокус-кольцо и акцент на тёмном фоне. */
+  --color-accent: #2563eb;
+  --color-accent-strong: #1d4ed8;
+  --color-accent-soft: #f0f4ff;
+  --color-accent-bright: #3b82f6;
+
+  --color-ok: #10b981;
+  --color-ok-ink: #047857; /* 5.5:1 с белым */
+  --color-error: #dc2626;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+
+  /* Шкала с шагом не меньше 1.25: 14 · 16 · 20 · 24 · 36 · 48 · 72 */
+  --text-*: initial;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.5rem;
+  --text-xl--line-height: 2rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    min-height: 100dvh;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-bright);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: 78rem; /* 1200 контента + поля */
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  .section {
+    padding-block: 3rem;
+  }
+
+  /* Типографика. Мобильные размеры — база, дальше растут на 768 и 1024. */
+  .t-display {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  .t-h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  .t-h2 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .t-h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  .t-lead {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-wrap: pretty;
+  }
+
+  .t-prose {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    text-wrap: pretty;
+  }
+
+  /* Служебная строка: номера, типы, годы, стек. */
+  .t-meta {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--color-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (width >= 48rem) {
+    .shell {
+      padding-inline: 1.5rem;
+    }
+
+    .section {
+      padding-block: 4rem;
+    }
+
+    .t-display {
+      font-size: 3.5rem;
+      line-height: 3.75rem;
+    }
+
+    .t-h1 {
+      font-size: 3rem;
+      line-height: 3.25rem;
+    }
+
+    .t-h2 {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+
+    .t-h3 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .t-lead {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (width >= 64rem) {
+    .section {
+      padding-block: 5rem;
+    }
+
+    .t-display {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+      letter-spacing: -0.04em;
+    }
+  }
+
+  /* Кнопки. Высота 48px — попадает пальцем, радиус 8px из брифа. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.75rem 1.75rem;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    text-align: center;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-accent-strong);
+  }
+
+  .btn-primary:disabled {
+    background: var(--color-muted);
+    cursor: progress;
+  }
+
+  .btn-secondary {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-accent-soft);
+    border-color: var(--color-accent-strong);
+    color: var(--color-accent-strong);
+  }
+
+  /* Текстовая ссылка со стрелкой: стрелка сдвигается, подтверждая наведение. */
+  .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3em;
+    transition: color 0.2s ease;
+  }
+
+  .link-arrow:hover {
+    color: var(--color-accent-strong);
+  }
+
+  .link-arrow svg {
+    flex: none;
+    transition: transform 0.2s ease;
+  }
+
+  .link-arrow:hover svg {
+    transform: translateX(0.25rem);
+  }
+
+  .field {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-muted);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .field:focus-visible {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent-bright) 35%, transparent);
+  }
+
+  .field[aria-invalid="true"] {
+    border-color: var(--color-error);
+  }
+}
+
+@layer components {
+  /* Ссылка «назад»: стрелка уезжает влево, по направлению перехода. */
+  .link-arrow-back:hover svg {
+    transform: translateX(-0.25rem);
+  }
+}
+
+@layer components {
+  /* Свой шеврон вместо системного: одинаково выглядит в Chrome, Safari и Firefox. */
+  select.field {
+    appearance: none;
+    padding-right: 2.75rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%231a1a1a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+  }
+
+  /* Пока тип не выбран, в поле стоит подсказка — она приглушена. */
+  select.field:invalid {
+    color: var(--color-muted);
+  }
+}
+
+@layer components {
+  /* Мобильное меню выезжает из-под шапки — видно, откуда оно взялось. */
+  .menu-panel {
+    animation: menu-in 0.2s ease-out;
+  }
+
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  /* Новое сообщение в чате и уведомление об отправке всплывают снизу:
+     так видно, что это ответ на только что сделанное действие. */
+  .appear {
+    animation: appear 0.2s ease-out backwards;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+  }
+}

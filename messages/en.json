@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "home": {
+      "title": "Dastan Kubanov — websites, bots and scripts for small businesses",
+      "description": "Independent web developer. I build websites, Telegram and WhatsApp bots, and automation scripts. One person, projects from $100."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Websites, bots, scripts and other jobs Dastan Kubanov takes on. Minimum project budget is $100."
+    },
+    "portfolio": {
+      "title": "Work",
+      "description": "Websites, bots and scripts built by Dastan Kubanov. Filter by type of work."
+    },
+    "about": {
+      "title": "About",
+      "description": "Dastan Kubanov, 23, more than five years in web development. I work alone, from the first conversation to launch."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Message Dastan on Telegram or WhatsApp, or fill in the order form — the request reaches him on Telegram and by email."
+    },
+    "notFound": {
+      "title": "Page not found"
+    }
+  },
+  "common": {
+    "name": "Dastan Kubanov",
+    "role": "Independent web developer",
+    "skipToContent": "Skip to content",
+    "newTab": "opens in a new tab"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "services": "Services",
+    "portfolio": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "locale": {
+    "label": "Site language",
+    "ru": "Русский",
+    "ky": "Кыргызча",
+    "en": "English"
+  },
+  "availability": {
+    "time": "{time} in Bishkek",
+    "online": "online now",
+    "offline": "back after {hour}:00"
+  },
+  "categories": {
+    "website": "Website",
+    "bot": "Bot",
+    "script": "Script",
+    "other": "Other"
+  },
+  "home": {
+    "eyebrow": "Independent developer",
+    "titleLead": "I build websites, bots and scripts.",
+    "titleRest": "Alone — no studio, no managers.",
+    "lead": "I'm Dastan, I'm 23 and I've been in web development for more than five years. I take on whole jobs for small businesses and startups: front end, back end, bots, automation. You write to me — I'm the one who answers and the one who writes the code.",
+    "ctaPrimary": "Discuss a project",
+    "ctaSecondary": "See the work",
+    "facts": {
+      "label": "The short version",
+      "experience": {
+        "term": "Experience",
+        "value": "More than 5 years"
+      },
+      "format": {
+        "term": "Setup",
+        "value": "One developer, not a studio"
+      },
+      "budget": {
+        "term": "Budget",
+        "value": "Projects from $100"
+      },
+      "languages": {
+        "term": "Languages",
+        "value": "English, Russian, Kyrgyz"
+      }
+    },
+    "services": {
+      "title": "What I do",
+      "note": "Four kinds of jobs. Scope and examples are on the services page.",
+      "items": {
+        "website": {
+          "title": "Websites",
+          "text": "Landing pages, multi-page sites, online shops. With an enquiry form that messages you on Telegram."
+        },
+        "bot": {
+          "title": "Bots",
+          "text": "Telegram and WhatsApp: bookings, order intake, answers to common questions, broadcasts."
+        },
+        "script": {
+          "title": "Scripts",
+          "text": "Scrapers, exports, syncing spreadsheets with a CRM — the things you now do by hand for an hour a day."
+        },
+        "other": {
+          "title": "And the rest",
+          "text": "Admin panels, integrations, fixing someone else's code, moving to a new host. Ask — I'll tell you whether I take it."
+        }
+      }
+    },
+    "featured": {
+      "title": "Selected work",
+      "all": "All work",
+      "allNote": "The portfolio has {count, plural, one {# project} other {# projects}}, filterable by type: websites, bots, scripts."
+    }
+  },
+  "closing": {
+    "title": "Describe the job in two sentences",
+    "text": "I reply myself: whether I take it, what I need from you and what it costs. Telegram is the fastest way.",
+    "telegram": "Message on Telegram",
+    "form": "Fill in the form"
+  },
+  "services": {
+    "title": "Services",
+    "lead": "Four kinds of jobs I take on. The minimum project budget is $100; I name the exact price once I understand the task.",
+    "navLabel": "On this page",
+    "works": "Work of this type in the portfolio",
+    "example": "Example",
+    "website": {
+      "title": "Websites",
+      "text": "I build the whole site: structure, layout, enquiry form, deployment. You don't have to hire a designer, a front-end developer and a back-end developer separately.",
+      "typesTitle": "Sites I build",
+      "types": {
+        "landing": {
+          "name": "Landing page",
+          "text": "One page for one product, service or event."
+        },
+        "multipage": {
+          "name": "Multi-page site",
+          "text": "Company, services, work, contacts — like the site you are on."
+        },
+        "shop": {
+          "name": "Online shop",
+          "text": "Catalogue, cart, payments, order notifications."
+        },
+        "cabinet": {
+          "name": "Customer account",
+          "text": "A private area for clients or staff: orders, bookings, reports."
+        }
+      },
+      "includesTitle": "What the job includes",
+      "includes": {
+        "responsive": "Layout for phone, tablet and desktop",
+        "form": "Enquiry form with a notification to Telegram or email",
+        "languages": "Several languages if you need them",
+        "hosting": "Domain, hosting and SSL: set up and handed over to you",
+        "seo": "Meta tags and a sitemap for search engines"
+      }
+    },
+    "bot": {
+      "title": "Bots",
+      "text": "A bot answers customers while you are busy: takes an order, books a time slot and tells you about the new request. It runs in the messenger your customers already use.",
+      "platforms": "Telegram, WhatsApp and other messengers with an open API.",
+      "demoCaption": "salon booking bot",
+      "demo": {
+        "user": "I'd like to book a haircut",
+        "bot": "When suits you?",
+        "options": {
+          "today": "Today, 17:00",
+          "tomorrow": "Tomorrow, 11:00",
+          "other": "Another time"
+        },
+        "replies": {
+          "today": "Booked for today, 17:00. I'll remind you an hour before.",
+          "tomorrow": "Booked for tomorrow, 11:00. I'll remind you an hour before.",
+          "other": "Send a time that suits you — I'll check whether it's free."
+        },
+        "hint": "Pick an option — the bot will answer.",
+        "restart": "Start over",
+        "userLabel": "Customer",
+        "botLabel": "Bot"
+      },
+      "scenariosTitle": "What a bot handles",
+      "scenarios": {
+        "booking": "Bookings and visit reminders",
+        "orders": "Order intake and status messages",
+        "faq": "Answers to common questions",
+        "mailing": "Broadcasts to your customer list",
+        "alerts": "Alerts to staff about new requests"
+      }
+    },
+    "script": {
+      "title": "Scripts",
+      "text": "If you copy data from one spreadsheet to another every day, a script can do it. It runs on a schedule and sends a report when it finishes.",
+      "demoCaption": "updating prices from a supplier price list",
+      "demo": {
+        "line1": "supplier price list: 1,240 items",
+        "line2": "price changed: 86",
+        "line3": "updated in the shop: 86",
+        "done": "done in 38 s, report sent to Telegram"
+      },
+      "tasksTitle": "What a script takes over",
+      "tasks": {
+        "parsing": "Collecting data from websites",
+        "reports": "Scheduled exports and reports",
+        "sync": "Syncing spreadsheets, CRM and shop",
+        "files": "Batch processing of files and images",
+        "api": "Connecting services through their APIs"
+      }
+    },
+    "other": {
+      "title": "And the rest",
+      "text": "Jobs that don't fit the three sections above but that I also do.",
+      "items": {
+        "admin": "Admin panels and internal tools",
+        "integrations": "Payment and CRM integrations",
+        "legacy": "Fixing and extending someone else's code",
+        "migration": "Moving a site to another host",
+        "speed": "Speeding up a slow site"
+      },
+      "ask": "Can't see your task here?",
+      "askLink": "Describe it — I'll tell you whether I take it"
+    }
+  },
+  "portfolio": {
+    "title": "Work",
+    "lead": "Websites, bots and scripts I have built. Pick a type to see only that kind of work.",
+    "filterLabel": "Filter by type of work",
+    "filters": {
+      "all": "All",
+      "website": "Websites",
+      "bot": "Bots",
+      "script": "Scripts",
+      "other": "Other"
+    },
+    "shown": "Projects shown: {count}",
+    "openCase": "Open case",
+    "empty": "No work in this category yet.",
+    "sampleNotice": "These are sample cases. Before launch, replace them with real projects in src/content/projects.ts."
+  },
+  "case": {
+    "back": "All work",
+    "category": "Type",
+    "year": "Year",
+    "stack": "Stack",
+    "link": "Link",
+    "open": "Open the project",
+    "task": "The task",
+    "done": "What I did",
+    "result": "Result",
+    "next": "Next project"
+  },
+  "about": {
+    "title": "About",
+    "statement": "I'm 23, and for more than five of those years I've been building websites, bots and scripts for clients.",
+    "p1": "I'm not a studio and not a team. You discuss the task with the same person who writes the code — no account manager in between and no \"let me check with the developers\".",
+    "p2": "I work with small businesses, startups and organisations that need one person for the whole job: from the first conversation to a working site or bot.",
+    "processTitle": "How the work goes",
+    "process": {
+      "brief": {
+        "title": "You describe the task",
+        "text": "In your own words, on Telegram or through the form. No formal spec needed."
+      },
+      "estimate": {
+        "title": "I name the deadline and the price",
+        "text": "After a couple of clarifying questions and before any work starts."
+      },
+      "progress": {
+        "title": "I show progress as I go",
+        "text": "You get a link to a working version, not status reports."
+      },
+      "handover": {
+        "title": "I launch and hand over access",
+        "text": "The domain, hosting, code and instructions stay with you."
+      }
+    },
+    "stackTitle": "What I work with",
+    "stack": {
+      "frontend": "Front end",
+      "backend": "Back end",
+      "bots": "Bots",
+      "launch": "Launch",
+      "launchItems": "Domains, hosting, Vercel, Linux servers"
+    },
+    "factsTitle": "In numbers",
+    "facts": {
+      "years": {
+        "value": "5+",
+        "label": "years in web development"
+      },
+      "people": {
+        "value": "1",
+        "label": "person per project: both the messages and the code"
+      },
+      "languages": {
+        "value": "3",
+        "label": "working languages: English, Russian, Kyrgyz"
+      },
+      "budget": {
+        "value": "$100",
+        "label": "minimum project budget"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "I reply fastest on Telegram. If you prefer a form, fill it in — the request reaches me on the same Telegram and by email.",
+    "channelsTitle": "Write directly",
+    "channels": {
+      "telegram": {
+        "name": "Telegram",
+        "note": "main channel"
+      },
+      "whatsapp": {
+        "name": "WhatsApp",
+        "note": "messages and calls"
+      },
+      "instagram": {
+        "name": "Instagram",
+        "note": "direct messages"
+      }
+    },
+    "formTitle": "Order form",
+    "formNote": "All fields are required."
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "projectType": "Project type",
+    "projectTypePlaceholder": "Choose a type",
+    "types": {
+      "website": "Website",
+      "bot": "Bot",
+      "script": "Script",
+      "other": "Other"
+    },
+    "budget": "Budget",
+    "budgets": {
+      "small": "$100–300",
+      "medium": "$300–1,000",
+      "large": "$1,000 and up",
+      "unknown": "Not sure yet"
+    },
+    "message": "The task",
+    "messageHint": "What needs to be done and by when. Two or three sentences are enough.",
+    "company": "Company",
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "errors": {
+      "nameShort": "Enter your name — at least two letters",
+      "nameLong": "The name is too long: 80 characters at most",
+      "emailInvalid": "Check the address: it should look like name@example.com",
+      "typeRequired": "Choose a project type",
+      "budgetRequired": "Choose a budget or \"Not sure yet\"",
+      "messageShort": "Describe the task in more detail — at least 20 characters",
+      "messageLong": "Too long: 2,000 characters at most"
+    },
+    "success": "Request sent. I'll reply to {email}.",
+    "failure": "The request could not be sent. Message me directly on Telegram — your text is still in the form.",
+    "failureLink": "Open Telegram",
+    "dismiss": "Dismiss notification"
+  },
+  "footer": {
+    "about": "Independent web developer. Websites, bots and scripts for small businesses and startups.",
+    "navTitle": "Pages",
+    "contactsTitle": "Get in touch",
+    "copyright": "© {year} Dastan Kubanov"
+  },
+  "notFound": {
+    "title": "This page does not exist",
+    "text": "The link is outdated or there is a typo in the address.",
+    "home": "Go to the home page",
+    "portfolio": "See the work"
+  }
+}
