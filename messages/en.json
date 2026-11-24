@@ -6,7 +6,7 @@
     },
     "services": {
       "title": "Websites, bots and automation scripts",
-      "description": "Websites, Telegram and WhatsApp bots, automation scripts and work on existing projects. Based in Kyrgyzstan, working remotely worldwide. Minimum budget $100."
+      "description": "Websites, Telegram and WhatsApp bots, automation scripts, CRM and ERP systems. Based in Kyrgyzstan, working remotely worldwide. Minimum budget $100."
     },
     "portfolio": {
       "title": "Work",
@@ -99,8 +99,8 @@
           "text": "Scrapers, exports, syncing spreadsheets with a CRM — the things you now do by hand for an hour a day."
         },
         "other": {
-          "title": "And the rest",
-          "text": "Admin panels, integrations, fixing someone else's code, moving to a new host. Ask — I'll tell you whether I take it."
+          "title": "CRM, ERP and more",
+          "text": "CRM and ERP built around your processes, admin panels, integrations, fixing other people's code. Ask — I'll tell you whether I'll take it on."
         }
       }
     },
@@ -205,9 +205,10 @@
       }
     },
     "other": {
-      "title": "And the rest",
-      "text": "Jobs that don't fit the three sections above but that I also do.",
+      "title": "CRM, ERP and more",
+      "text": "Internal systems built around how your company works, and jobs that don't fit the three sections above.",
       "items": {
+        "crm": "CRM and ERP built around your processes: leads, clients, stock, staff, reports",
         "admin": "Admin panels and internal tools",
         "integrations": "Payment and CRM integrations",
         "legacy": "Fixing and extending someone else's code",

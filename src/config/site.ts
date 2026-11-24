@@ -2,19 +2,18 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   minBudgetUsd: 100,
 
-  // ЗАМЕНИТЬ ПЕРЕД ЗАПУСКОМ: сейчас здесь условные контакты.
   contacts: {
     telegram: {
-      label: "@your_username",
-      href: "https://t.me/your_username",
+      label: "@sino0on",
+      href: "https://t.me/sino0on",
     },
     whatsapp: {
-      label: "+996 000 000 000",
-      href: "https://wa.me/996000000000",
+      label: "+996 707 945 462",
+      href: "https://wa.me/996707945462",
     },
     instagram: {
-      label: "@your_username",
-      href: "https://instagram.com/your_username",
+      label: "@dastan.it",
+      href: "https://instagram.com/dastan.it",
     },
   },
 

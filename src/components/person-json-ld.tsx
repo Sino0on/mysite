@@ -54,6 +54,7 @@ export async function PersonJsonLd({ locale }: { locale: Locale }) {
           "Telegram bots",
           "WhatsApp bots",
           "Automation scripts",
+          "CRM and ERP systems",
         ],
       },
     ],

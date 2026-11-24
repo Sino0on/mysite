@@ -15,7 +15,7 @@ const siteTypes = ["landing", "multipage", "shop", "cabinet"] as const;
 const siteIncludes = ["responsive", "form", "languages", "hosting", "seo"] as const;
 const botScenarios = ["booking", "orders", "faq", "mailing", "alerts"] as const;
 const scriptTasks = ["parsing", "reports", "sync", "files", "api"] as const;
-const otherItems = ["admin", "integrations", "legacy", "migration", "speed"] as const;
+const otherItems = ["crm", "admin", "integrations", "legacy", "migration", "speed"] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
