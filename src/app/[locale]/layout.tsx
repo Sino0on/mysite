@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PersonJsonLd } from "@/components/person-json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/config/site";
@@ -42,6 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: `%s — ${t("common.name")}`,
     },
     openGraph: { siteName: t("common.name") },
+    // Большая карточка с картинкой из opengraph-image.tsx вместо маленькой иконки.
+    twitter: { card: "summary_large_image" },
   };
 }
 
@@ -59,6 +62,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="flex flex-col">
+        <PersonJsonLd locale={locale} />
         <NextIntlClientProvider>
           <a
             href="#content"

@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactPanel } from "@/components/contact-panel";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "@/components/icons";
 import { ProjectCover } from "@/components/project-cover";
-import { getProject, projects } from "@/content/projects";
+import { getProject, projects, PROJECTS_ARE_SAMPLES } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/page-metadata";
@@ -29,6 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/portfolio/${slug}`,
     title: project.title[locale],
     description: project.summary[locale],
+    // Образцы не должны ранжироваться как настоящие работы.
+    indexable: !PROJECTS_ARE_SAMPLES,
   });
 }
 

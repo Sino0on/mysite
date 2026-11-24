@@ -33,7 +33,11 @@ export function Availability({ className = "" }: { className?: string }) {
   const online = hour !== null && hour >= fromHour && hour < toHour;
 
   return (
-    <p className={`t-meta flex flex-wrap items-center gap-x-2 ${className}`}>
+    // data-nosnippet: время меняется каждую минуту, в сниппете поиска оно только мешает.
+    <p
+      data-nosnippet
+      className={`t-meta flex flex-wrap items-center gap-x-2 ${className}`}
+    >
       {/* Статус читается и без цвета: закрашенная точка против пустой + текст. */}
       <span
         aria-hidden

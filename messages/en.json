@@ -1,12 +1,12 @@
 {
   "meta": {
     "home": {
-      "title": "Dastan Kubanov — websites, bots and scripts for small businesses",
-      "description": "Independent web developer. I build websites, Telegram and WhatsApp bots, and automation scripts. One person, projects from $100."
+      "title": "Dastan Kubanov — freelance web and bot developer in Kyrgyzstan",
+      "description": "Solo developer based in Bishkek, Kyrgyzstan, working remotely with clients worldwide. Websites, Telegram and WhatsApp bots, automation scripts. Projects from $100."
     },
     "services": {
-      "title": "Services",
-      "description": "Websites, bots, scripts and other jobs Dastan Kubanov takes on. Minimum project budget is $100."
+      "title": "Websites, bots and automation scripts",
+      "description": "Websites, Telegram and WhatsApp bots, automation scripts and work on existing projects. Based in Kyrgyzstan, working remotely worldwide. Minimum budget $100."
     },
     "portfolio": {
       "title": "Work",
@@ -14,7 +14,7 @@
     },
     "about": {
       "title": "About",
-      "description": "Dastan Kubanov, 23, more than five years in web development. I work alone, from the first conversation to launch."
+      "description": "Dastan Kubanov, 23, web developer from Bishkek with more than five years in the field. I work alone, from the first conversation to launch, with clients in Kyrgyzstan and abroad."
     },
     "contact": {
       "title": "Contact",
@@ -57,10 +57,10 @@
     "other": "Other"
   },
   "home": {
-    "eyebrow": "Independent developer",
+    "eyebrow": "Independent developer · Bishkek, Kyrgyzstan",
     "titleLead": "I build websites, bots and scripts.",
     "titleRest": "Alone — no studio, no managers.",
-    "lead": "I'm Dastan, I'm 23 and I've been in web development for more than five years. I take on whole jobs for small businesses and startups: front end, back end, bots, automation. You write to me — I'm the one who answers and the one who writes the code.",
+    "lead": "I'm Dastan, I'm 23 and I've been in web development for more than five years. I take on whole jobs for small businesses and startups: front end, back end, bots, automation. I'm based in Bishkek and work remotely with clients in other countries. You write to me — I'm the one who answers and the one who writes the code.",
     "ctaPrimary": "Discuss a project",
     "ctaSecondary": "See the work",
     "facts": {
@@ -232,7 +232,7 @@
     "shown": "Projects shown: {count}",
     "openCase": "Open case",
     "empty": "No work in this category yet.",
-    "sampleNotice": "These are sample cases. Before launch, replace them with real projects in src/content/projects.ts."
+    "sampleNotice": "These are examples of typical jobs, not projects for specific clients. Real case studies will appear here once clients approve them."
   },
   "case": {
     "back": "All work",
@@ -367,5 +367,11 @@
     "text": "The link is outdated or there is a typo in the address.",
     "home": "Go to the home page",
     "portfolio": "See the work"
+  },
+  "og": {
+    "place": "Bishkek, Kyrgyzstan",
+    "services": "Websites, Telegram bots, automation scripts",
+    "remote": "Working remotely with clients in any country",
+    "budget": "Projects from ${budget}"
   }
 }

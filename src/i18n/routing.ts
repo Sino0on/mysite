@@ -5,6 +5,9 @@ import { defineRouting } from "next-intl/routing";
 export const routing = defineRouting({
   locales: ["ru", "ky", "en"],
   defaultLocale: "ru",
+  // hreflang отдаёт сама страница в <head>; дубль в заголовке Link
+  // указывал x-default на "/", а не на "/ru", и спорил с разметкой.
+  alternateLinks: false,
 });
 
 export type Locale = (typeof routing.locales)[number];

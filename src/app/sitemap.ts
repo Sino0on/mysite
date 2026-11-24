@@ -1,14 +1,15 @@
 import type { MetadataRoute } from "next";
 import { navItems } from "@/config/nav";
 import { site } from "@/config/site";
-import { projects } from "@/content/projects";
+import { projects, PROJECTS_ARE_SAMPLES } from "@/content/projects";
 import { routing } from "@/i18n/routing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "",
     ...navItems.map(({ href }) => href),
-    ...projects.map(({ slug }) => `/portfolio/${slug}`),
+    // Страницы кейсов-образцов закрыты от индексации — в карте их тоже нет.
+    ...(PROJECTS_ARE_SAMPLES ? [] : projects.map(({ slug }) => `/portfolio/${slug}`)),
   ];
 
   return paths.flatMap((path) =>
