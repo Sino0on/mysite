@@ -25,59 +25,113 @@ export type Project = {
 // Пока true, на главной и в портфолио висит плашка «это образцы».
 export const PROJECTS_ARE_SAMPLES = false;
 
+// Порядок в массиве — порядок на главной и в портфолио.
 // Годы — по дате регистрации домена клиента. Стек — по тому, что видно на сайте.
 export const projects: Project[] = [
   {
-    slug: "nurkadam",
+    slug: "girls-club",
     category: "website",
     year: 2026,
     featured: true,
     stack: ["Python", "Django"],
-    url: "https://nurkadam.kg/",
+    url: "https://girlsclub.ques.kg/",
     image: {
-      src: "/projects/nurkadam.jpg",
+      src: "/projects/girls-club.jpg",
       alt: {
-        ru: "Главная NurKadam: заголовок «Работа в Болгарии с жильём и билетами» и список открытых вакансий с зарплатами",
-        ky: "NurKadam башкы барагы: «Болгарияда турак жай жана билет менен иш» аталышы жана айлыгы көрсөтүлгөн ачык вакансиялар",
-        en: "NurKadam home page: the headline “Work in Bulgaria with housing and tickets” and a list of open jobs with salaries",
+        ru: "Лендинг вечера «1001 ночь»: золотой заголовок на бордовом фоне, дата, место, цена билета и кнопка «Купить билет»",
+        ky: "«1001 түн» кечесинин лендинги: кочкул кызыл фондогу алтын аталыш, датасы, орду, билеттин баасы жана «Билет сатып алуу» баскычы",
+        en: "Landing page for the “1001 Nights” evening: gold headline on burgundy, date, venue, ticket price and a “Buy ticket” button",
       },
     },
     title: {
-      ru: "Сайт рекрутингового агентства NurKadam",
-      ky: "NurKadam рекрутинг агенттигинин сайты",
-      en: "Website for the NurKadam recruitment agency",
+      ru: "Лендинг вечера Girls Club «1001 ночь»",
+      ky: "Girls Club «1001 түн» кечесинин лендинги",
+      en: "Landing page for the Girls Club “1001 Nights” evening",
     },
     summary: {
-      ru: "Вакансии в Болгарии для граждан Кыргызстана: зарплата, жильё и условия видны до звонка менеджеру. Четыре языка.",
-      ky: "Кыргызстандын жарандары үчүн Болгариядагы вакансиялар: айлык, турак жай жана шарттар менеджерге чалганга чейин көрүнөт. Төрт тил.",
-      en: "Jobs in Bulgaria for citizens of Kyrgyzstan: salary, housing and conditions are visible before anyone calls a manager. Four languages.",
+      ru: "Одна страница под одно событие: дата, место, программа, цена билета и покупка.",
+      ky: "Бир окуя үчүн бир барак: датасы, орду, программасы, билеттин баасы жана сатып алуу.",
+      en: "One page for one event: date, venue, programme, ticket price and purchase.",
     },
     task: {
-      ru: "Агентству нужен был сайт, по которому соискатель сам поймёт, какие есть вакансии и на каких условиях, и одним нажатием напишет менеджеру.",
-      ky: "Агенттикке издөөчү кандай вакансиялар бар экенин жана шарттарын өзү түшүнүп, бир басуу менен менеджерге жаза турган сайт керек болчу.",
-      en: "The agency needed a site where a job seeker can see the open positions and their terms on their own, then message a manager in one tap.",
+      ru: "Организаторам вечера нужна была страница, на которую можно дать одну ссылку в соцсетях — и человек сразу видит всё о событии и покупает билет.",
+      ky: "Кечени уюштуруучуларга соцтармактарда бир шилтеме берсе, адам окуя тууралуу баарын дароо көрүп, билет сатып ала турган барак керек болчу.",
+      en: "The organisers needed a page they could share as a single link on social media, where people see everything about the event and buy a ticket.",
     },
     done: {
       ru: [
-        "Сделал каталог вакансий с зарплатой и условиями на каждой карточке",
-        "Перевёл сайт на русский, кыргызский, английский и болгарский",
-        "Вывел WhatsApp-кнопку на каждый экран и разметку для поисковиков",
+        "Сверстал лендинг в восточной стилистике вечера",
+        "Сделал вступительную анимацию, которая показывается один раз за визит",
+        "Вывел цену билета с учётом даты покупки и связь через WhatsApp",
       ],
       ky: [
-        "Ар бир карточкасында айлыгы жана шарттары бар вакансиялар каталогун жасадым",
-        "Сайтты орус, кыргыз, англис жана болгар тилдерине которудум",
-        "Ар бир экранга WhatsApp баскычын жана издөө системалары үчүн белгилөөнү коштум",
+        "Кечеге ылайык чыгыш стилинде лендинг жасадым",
+        "Бир келүүдө бир жолу гана көрсөтүлүүчү кириш анимациясын жасадым",
+        "Сатып алуу датасына жараша билеттин баасын жана WhatsApp байланышын коштум",
       ],
       en: [
-        "Built a job catalogue with salary and terms on every card",
-        "Made the site available in Russian, Kyrgyz, English and Bulgarian",
-        "Put a WhatsApp button on every screen and added markup for search engines",
+        "Built the landing page in the evening's oriental style",
+        "Made an intro animation that plays once per visit",
+        "Showed the ticket price by purchase date and added WhatsApp contact",
       ],
     },
     result: {
-      ru: "Соискатель видит зарплату, жильё и условия до первого звонка и пишет в WhatsApp уже по конкретной вакансии.",
-      ky: "Издөөчү айлыкты, турак жайды жана шарттарды биринчи чалуудан мурун көрүп, WhatsApp'ка белгилүү бир вакансия боюнча жазат.",
-      en: "Applicants see the salary, housing and terms before the first call and message on WhatsApp about a specific job.",
+      ru: "Всё о вечере и покупка билета — по одной ссылке, которую организаторы ставят во все соцсети.",
+      ky: "Кече тууралуу баары жана билет сатып алуу — уюштуруучулар бардык соцтармактарга коё турган бир шилтемеде.",
+      en: "Everything about the evening and ticket purchase sits behind one link the organisers post on every social network.",
+    },
+  },
+  {
+    slug: "avangard-style",
+    category: "website",
+    year: 2025,
+    featured: true,
+    stack: ["Tilda"],
+    url: "https://avangardstyle.kg/",
+    image: {
+      src: "/projects/avangard-style.jpg",
+      alt: {
+        ru: "Главная «Авангард Стиль»: фото жилых многоэтажек и цифры компании — с 1998 года, более 155 объектов, более 700 000 м²",
+        ky: "«Авангард Стиль» башкы барагы: көп кабаттуу турак үйлөрдүн сүрөтү жана компаниянын сандары — 1998-жылдан бери, 155тен ашык объект, 700 000 м²ден ашык",
+        en: "Avangard Style home page: photo of residential high-rises and company figures — since 1998, 155+ buildings, 700,000+ m²",
+      },
+    },
+    title: {
+      ru: "Сайт строительной компании «Авангард Стиль»",
+      ky: "«Авангард Стиль» курулуш компаниясынын сайты",
+      en: "Website for the Avangard Style construction company",
+    },
+    summary: {
+      ru: "Сайт застройщика на Tilda: о компании, продажа квартир, бизнес-центр и фитнес-клуб в одном меню.",
+      ky: "Tilda'дагы курулуш компаниясынын сайты: компания жөнүндө, батир сатуу, бизнес-борбор жана фитнес-клуб бир менюда.",
+      en: "A developer's website on Tilda: the company, flat sales, a business centre and a fitness club in one menu.",
+    },
+    task: {
+      ru: "Компания строит с 1998 года, у неё жильё, коммерческие объекты и свои бизнес-центр и фитнес-клуб. Всё это нужно было показать на одном сайте, который сотрудники могут править сами.",
+      ky: "Компания 1998-жылдан бери курат, анын турак жайы, коммерциялык объекттери, өзүнүн бизнес-борбору жана фитнес-клубу бар. Мунун баарын кызматкерлер өздөрү оңдой ала турган бир сайтта көрсөтүү керек болчу.",
+      en: "The company has been building since 1998 and runs housing, commercial projects, its own business centre and a fitness club. All of it had to fit on one site that staff can edit themselves.",
+    },
+    done: {
+      ru: [
+        "Собрал сайт на Tilda с разделами под каждое направление",
+        "Вынес ключевые цифры компании на первый экран",
+        "Добавил кнопку «Связаться» и чат на каждой странице",
+      ],
+      ky: [
+        "Ар бир багыт үчүн бөлүмдөрү бар сайтты Tilda'да түздүм",
+        "Компаниянын негизги сандарын биринчи экранга чыгардым",
+        "Ар бир баракка «Байланышуу» баскычын жана чатты коштум",
+      ],
+      en: [
+        "Built the site on Tilda with a section for each line of business",
+        "Put the company's key figures on the first screen",
+        "Added a “Contact us” button and chat on every page",
+      ],
+    },
+    result: {
+      ru: "Тексты, фото и объекты сотрудники компании обновляют в Tilda сами, без разработчика.",
+      ky: "Тексттерди, сүрөттөрдү жана объекттерди компаниянын кызматкерлери Tilda'да иштеп чыгуучусуз өздөрү жаңыртышат.",
+      en: "Company staff update texts, photos and listings in Tilda themselves, without a developer.",
     },
   },
   {
@@ -134,63 +188,116 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "nurkadam",
+    category: "website",
+    year: 2026,
+    featured: true,
+    stack: ["Python", "Django"],
+    url: "https://nurkadam.kg/",
+    image: {
+      src: "/projects/nurkadam.jpg",
+      alt: {
+        ru: "Главная NurKadam: заголовок «Работа в Болгарии с жильём и билетами» и список открытых вакансий с зарплатами",
+        ky: "NurKadam башкы барагы: «Болгарияда турак жай жана билет менен иш» аталышы жана айлыгы көрсөтүлгөн ачык вакансиялар",
+        en: "NurKadam home page: the headline “Work in Bulgaria with housing and tickets” and a list of open jobs with salaries",
+      },
+    },
+    title: {
+      ru: "Сайт рекрутингового агентства NurKadam",
+      ky: "NurKadam рекрутинг агенттигинин сайты",
+      en: "Website for the NurKadam recruitment agency",
+    },
+    summary: {
+      ru: "Вакансии в Болгарии для граждан Кыргызстана: зарплата, жильё и условия видны до звонка менеджеру. Четыре языка.",
+      ky: "Кыргызстандын жарандары үчүн Болгариядагы вакансиялар: айлык, турак жай жана шарттар менеджерге чалганга чейин көрүнөт. Төрт тил.",
+      en: "Jobs in Bulgaria for citizens of Kyrgyzstan: salary, housing and conditions are visible before anyone calls a manager. Four languages.",
+    },
+    task: {
+      ru: "Агентству нужен был сайт, по которому соискатель сам поймёт, какие есть вакансии и на каких условиях, и одним нажатием напишет менеджеру.",
+      ky: "Агенттикке издөөчү кандай вакансиялар бар экенин жана шарттарын өзү түшүнүп, бир басуу менен менеджерге жаза турган сайт керек болчу.",
+      en: "The agency needed a site where a job seeker can see the open positions and their terms on their own, then message a manager in one tap.",
+    },
+    done: {
+      ru: [
+        "Сделал каталог вакансий с зарплатой и условиями на каждой карточке",
+        "Перевёл сайт на русский, кыргызский, английский и болгарский",
+        "Вывел WhatsApp-кнопку на каждый экран и разметку для поисковиков",
+      ],
+      ky: [
+        "Ар бир карточкасында айлыгы жана шарттары бар вакансиялар каталогун жасадым",
+        "Сайтты орус, кыргыз, англис жана болгар тилдерине которудум",
+        "Ар бир экранга WhatsApp баскычын жана издөө системалары үчүн белгилөөнү коштум",
+      ],
+      en: [
+        "Built a job catalogue with salary and terms on every card",
+        "Made the site available in Russian, Kyrgyz, English and Bulgarian",
+        "Put a WhatsApp button on every screen and added markup for search engines",
+      ],
+    },
+    result: {
+      ru: "Соискатель видит зарплату, жильё и условия до первого звонка и пишет в WhatsApp уже по конкретной вакансии.",
+      ky: "Издөөчү айлыкты, турак жайды жана шарттарды биринчи чалуудан мурун көрүп, WhatsApp'ка белгилүү бир вакансия боюнча жазат.",
+      en: "Applicants see the salary, housing and terms before the first call and message on WhatsApp about a specific job.",
+    },
+  },
+  {
     slug: "ques",
     category: "website",
     year: 2025,
-    featured: true,
+    featured: false,
     stack: ["Python", "Django"],
     url: "https://ques.kg/",
     image: {
       src: "/projects/ques.jpg",
       alt: {
-        ru: "Первый экран ques.kg: логотип QUES × Winx в розово-сиреневых тонах и подсказка «Прокрути вниз, чтобы открыть магию»",
-        ky: "ques.kg биринчи экраны: кызгылт-кызгылт көк түстөгү QUES × Winx логотиби жана «Сыйкырды ачуу үчүн ылдый түшүрүңүз» деген жазуу",
-        en: "First screen of ques.kg: the QUES × Winx logo in pink and lilac and the hint “Scroll down to open the magic”",
+        ru: "Каталог ques.kg: сетка товаров с фото — жемчуг, бусы galaxy, шармы — и ценами в сомах",
+        ky: "ques.kg каталогу: сүрөттөрү бар товарлар — бермет, galaxy мончоктору, шармдар — жана сом менен баалары",
+        en: "The ques.kg catalogue: a grid of products with photos — pearls, galaxy beads, charms — and prices in som",
       },
     },
     title: {
-      ru: "Интернет-магазин свечей QUES",
-      ky: "QUES шамдар интернет-дүкөнү",
-      en: "QUES candle shop",
+      ru: "Каталог магазина Ques Home",
+      ky: "Ques Home дүкөнүнүн каталогу",
+      en: "Ques Home shop catalogue",
     },
     summary: {
-      ru: "Магазин концепт-стора свечей с отдельной страницей под коллекцию Winx: каталог, оплата и бокс со случайной свечой.",
-      ky: "Шам концепт-сторунун дүкөнү, Winx коллекциясы үчүн өзүнчө барагы бар: каталог, төлөм жана кокус шамы бар бокс.",
-      en: "Shop for a candle concept store with a dedicated page for the Winx collection: catalogue, payment and a box with a random candle.",
+      ru: "Каталог магазина товаров для дома и рукоделия: почти 1000 позиций с фото и ценами, поиск и заказ через WhatsApp.",
+      ky: "Үй жана кол өнөрчүлүк товарлары дүкөнүнүн каталогу: сүрөтү жана баасы бар 1000ге жакын позиция, издөө жана WhatsApp аркылуу буйрутма.",
+      en: "Catalogue for a home and craft goods shop: almost 1,000 items with photos and prices, search and ordering via WhatsApp.",
     },
     task: {
-      ru: "Магазину нужна была витрина, которая продаёт коллекцию как событие, а не как список товаров, и механика Secret Box, где покупатель не знает, какая фея ему достанется.",
-      ky: "Дүкөнгө коллекцияны товарлардын тизмеси катары эмес, окуя катары сатуучу витрина жана сатып алуучу кайсы пери түшөрүн билбеген Secret Box механикасы керек болчу.",
-      en: "The shop needed a storefront that sells a collection as an event rather than a product list, plus a Secret Box mechanic where buyers don't know which fairy they'll get.",
+      ru: "Ques Home продаёт бусы, шармы, свечи и вещи для дома — почти тысячу позиций. Нужен был каталог, где покупатель сам найдёт нужное и сразу закажет.",
+      ky: "Ques Home мончок, шарм, шам жана үй буюмдарын сатат — 1000ге жакын позиция. Сатып алуучу керектүүсүн өзү таап, дароо буйрутма бере турган каталог керек болчу.",
+      en: "Ques Home sells beads, charms, candles and homeware — almost a thousand items. The shop needed a catalogue where buyers find what they want on their own and order right away.",
     },
     done: {
       ru: [
-        "Сделал каталог и оформление заказа с оплатой",
-        "Собрал страницу коллекции Winx с пошаговой прокруткой",
-        "Реализовал Secret Box: магазин сам выбирает персонажа и свечу после покупки",
+        "Сделал каталог с категориями, поиском и постраничным выводом",
+        "Собрал карточку товара: фото, название и цена в сомах",
+        "Добавил заказ в один тап: кнопка открывает WhatsApp магазина",
       ],
       ky: [
-        "Каталогду жана төлөмү бар буйрутма берүүнү жасадым",
-        "Кадам-кадам менен жылдырылуучу Winx коллекциясынын барагын түздүм",
-        "Secret Box ишке ашырдым: сатып алгандан кийин дүкөн каарманды жана шамды өзү тандайт",
+        "Категориялары, издөөсү жана барактары бар каталог жасадым",
+        "Товардын карточкасын түздүм: сүрөт, аталыш жана сом менен баа",
+        "Бир басуу менен буйрутма коштум: баскыч дүкөндүн WhatsAppын ачат",
       ],
       en: [
-        "Built the catalogue and checkout with payment",
-        "Made the Winx collection page with step-by-step scrolling",
-        "Built Secret Box: the shop picks the character and candle after purchase",
+        "Built the catalogue with categories, search and pagination",
+        "Made the product page: photo, name and price in som",
+        "Added one-tap ordering: the button opens the shop's WhatsApp",
       ],
     },
     result: {
-      ru: "Новую коллекцию магазин запускает отдельной страницей на своём сайте, а не только постами в соцсетях.",
-      ky: "Дүкөн жаңы коллекцияны соцтармактагы посттор менен гана эмес, өз сайтындагы өзүнчө барак менен ишке киргизет.",
-      en: "The shop launches a new collection as its own page on its own site, not only as social media posts.",
+      ru: "Покупатель выбирает товар на сайте и пишет в WhatsApp уже с конкретной позицией, а не спрашивает «что есть в наличии».",
+      ky: "Сатып алуучу товарды сайттан тандап, WhatsAppка «эмне бар» деп сурабай, так позиция менен жазат.",
+      en: "Buyers pick an item on the site and message on WhatsApp about a specific product instead of asking what's in stock.",
     },
   },
   {
     slug: "european-group",
     category: "website",
     year: 2026,
-    featured: true,
+    featured: false,
     stack: ["Python", "Django"],
     url: "https://european-group.kg/",
     title: {
@@ -229,112 +336,6 @@ export const projects: Project[] = [
       ru: "Сайт стал постоянным источником заявок: клиенты часто приходят через форму, уже зная, какая услуга им нужна.",
       ky: "Сайт билдирмелердин туруктуу булагы болуп калды: кардарлар көбүнчө кайсы кызмат керек экенин билип, форма аркылуу келишет.",
       en: "The site became a steady source of leads: clients often come in through the form already knowing which service they need.",
-    },
-  },
-  {
-    slug: "girls-club",
-    category: "website",
-    year: 2026,
-    featured: false,
-    stack: ["Python", "Django"],
-    url: "https://girlsclub.ques.kg/",
-    image: {
-      src: "/projects/girls-club.jpg",
-      alt: {
-        ru: "Лендинг вечера «1001 ночь»: золотой заголовок на бордовом фоне, дата, место, цена билета и кнопка «Купить билет»",
-        ky: "«1001 түн» кечесинин лендинги: кочкул кызыл фондогу алтын аталыш, датасы, орду, билеттин баасы жана «Билет сатып алуу» баскычы",
-        en: "Landing page for the “1001 Nights” evening: gold headline on burgundy, date, venue, ticket price and a “Buy ticket” button",
-      },
-    },
-    title: {
-      ru: "Лендинг вечера Girls Club «1001 ночь»",
-      ky: "Girls Club «1001 түн» кечесинин лендинги",
-      en: "Landing page for the Girls Club “1001 Nights” evening",
-    },
-    summary: {
-      ru: "Одна страница под одно событие: дата, место, программа, цена билета и покупка.",
-      ky: "Бир окуя үчүн бир барак: датасы, орду, программасы, билеттин баасы жана сатып алуу.",
-      en: "One page for one event: date, venue, programme, ticket price and purchase.",
-    },
-    task: {
-      ru: "Организаторам вечера нужна была страница, на которую можно дать одну ссылку в соцсетях — и человек сразу видит всё о событии и покупает билет.",
-      ky: "Кечени уюштуруучуларга соцтармактарда бир шилтеме берсе, адам окуя тууралуу баарын дароо көрүп, билет сатып ала турган барак керек болчу.",
-      en: "The organisers needed a page they could share as a single link on social media, where people see everything about the event and buy a ticket.",
-    },
-    done: {
-      ru: [
-        "Сверстал лендинг в восточной стилистике вечера",
-        "Сделал вступительную анимацию, которая показывается один раз за визит",
-        "Вывел цену билета с учётом даты покупки и связь через WhatsApp",
-      ],
-      ky: [
-        "Кечеге ылайык чыгыш стилинде лендинг жасадым",
-        "Бир келүүдө бир жолу гана көрсөтүлүүчү кириш анимациясын жасадым",
-        "Сатып алуу датасына жараша билеттин баасын жана WhatsApp байланышын коштум",
-      ],
-      en: [
-        "Built the landing page in the evening's oriental style",
-        "Made an intro animation that plays once per visit",
-        "Showed the ticket price by purchase date and added WhatsApp contact",
-      ],
-    },
-    result: {
-      ru: "Всё о вечере и покупка билета — по одной ссылке, которую организаторы ставят во все соцсети.",
-      ky: "Кече тууралуу баары жана билет сатып алуу — уюштуруучулар бардык соцтармактарга коё турган бир шилтемеде.",
-      en: "Everything about the evening and ticket purchase sits behind one link the organisers post on every social network.",
-    },
-  },
-  {
-    slug: "avangard-style",
-    category: "website",
-    year: 2025,
-    featured: false,
-    stack: ["Tilda"],
-    url: "https://avangardstyle.kg/",
-    image: {
-      src: "/projects/avangard-style.jpg",
-      alt: {
-        ru: "Главная «Авангард Стиль»: фото жилых многоэтажек и цифры компании — с 1998 года, более 155 объектов, более 700 000 м²",
-        ky: "«Авангард Стиль» башкы барагы: көп кабаттуу турак үйлөрдүн сүрөтү жана компаниянын сандары — 1998-жылдан бери, 155тен ашык объект, 700 000 м²ден ашык",
-        en: "Avangard Style home page: photo of residential high-rises and company figures — since 1998, 155+ buildings, 700,000+ m²",
-      },
-    },
-    title: {
-      ru: "Сайт строительной компании «Авангард Стиль»",
-      ky: "«Авангард Стиль» курулуш компаниясынын сайты",
-      en: "Website for the Avangard Style construction company",
-    },
-    summary: {
-      ru: "Сайт застройщика на Tilda: о компании, продажа квартир, бизнес-центр и фитнес-клуб в одном меню.",
-      ky: "Tilda'дагы курулуш компаниясынын сайты: компания жөнүндө, батир сатуу, бизнес-борбор жана фитнес-клуб бир менюда.",
-      en: "A developer's website on Tilda: the company, flat sales, a business centre and a fitness club in one menu.",
-    },
-    task: {
-      ru: "Компания строит с 1998 года, у неё жильё, коммерческие объекты и свои бизнес-центр и фитнес-клуб. Всё это нужно было показать на одном сайте, который сотрудники могут править сами.",
-      ky: "Компания 1998-жылдан бери курат, анын турак жайы, коммерциялык объекттери, өзүнүн бизнес-борбору жана фитнес-клубу бар. Мунун баарын кызматкерлер өздөрү оңдой ала турган бир сайтта көрсөтүү керек болчу.",
-      en: "The company has been building since 1998 and runs housing, commercial projects, its own business centre and a fitness club. All of it had to fit on one site that staff can edit themselves.",
-    },
-    done: {
-      ru: [
-        "Собрал сайт на Tilda с разделами под каждое направление",
-        "Вынес ключевые цифры компании на первый экран",
-        "Добавил кнопку «Связаться» и чат на каждой странице",
-      ],
-      ky: [
-        "Ар бир багыт үчүн бөлүмдөрү бар сайтты Tilda'да түздүм",
-        "Компаниянын негизги сандарын биринчи экранга чыгардым",
-        "Ар бир баракка «Байланышуу» баскычын жана чатты коштум",
-      ],
-      en: [
-        "Built the site on Tilda with a section for each line of business",
-        "Put the company's key figures on the first screen",
-        "Added a “Contact us” button and chat on every page",
-      ],
-    },
-    result: {
-      ru: "Тексты, фото и объекты сотрудники компании обновляют в Tilda сами, без разработчика.",
-      ky: "Тексттерди, сүрөттөрдү жана объекттерди компаниянын кызматкерлери Tilda'да иштеп чыгуучусуз өздөрү жаңыртышат.",
-      en: "Company staff update texts, photos and listings in Tilda themselves, without a developer.",
     },
   },
 ];
